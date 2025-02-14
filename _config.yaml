@@ -1,0 +1,5 @@
+markdown: kramdown
+kramdown:
+  math_engine: mathjax
+  entity_output: asciidoc, html_entities
+  enable_coderay: false
