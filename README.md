@@ -141,41 +141,11 @@ zero_carbon_scenario:
 
 ### 5.1 二氧化碳排放计算
 在 `src/model.py` 中，每个领域的二氧化碳排放量计算公式如下：
-- **能源领域**：
-  \[E_{energy} = P \times GDP_{pc} \times EI \times FFR \times EF_{energy}\]
-  其中，\(E_{energy}\) 是能源领域的二氧化碳排放量，\(P\) 是人口数量，\(GDP_{pc}\) 是人均 GDP，\(EI\) 是能源强度，\(FFR\) 是化石燃料比例，\(EF_{energy}\) 是能源领域的碳排放系数。
-- **工业领域**：
-  \[E_{industry} = P \times GDP_{pc} \times EI \times FFR \times EF_{industry}\]
-  其中，\(E_{industry}\) 是工业领域的二氧化碳排放量，\(EF_{industry}\) 是工业领域的碳排放系数。
-- **交通领域**：
-  \[E_{transport} = P \times GDP_{pc} \times EI \times FFR \times EF_{transport}\]
-  其中，\(E_{transport}\) 是交通领域的二氧化碳排放量，\(EF_{transport}\) 是交通领域的碳排放系数。
-- **建筑领域**：
-  \[E_{building} = P \times GDP_{pc} \times EI \times FFR \times EF_{building}\]
-  其中，\(E_{building}\) 是建筑领域的二氧化碳排放量，\(EF_{building}\) 是建筑领域的碳排放系数。
-- **农业领域**：
-  \[E_{agriculture} = P \times GDP_{pc} \times EI \times FFR \times EF_{agriculture}\]
-  其中，\(E_{agriculture}\) 是农业领域的二氧化碳排放量，\(EF_{agriculture}\) 是农业领域的碳排放系数。
-- **服务领域**：
-  \[E_{service} = P \times GDP_{pc} \times EI \times FFR \times EF_{service}\]
-  其中，\(E_{service}\) 是服务领域的二氧化碳排放量，\(EF_{service}\) 是服务领域的碳排放系数。
-- **总排放量**：
-  \[E_{total} = E_{energy} + E_{industry} + E_{transport} + E_{building} + E_{agriculture} + E_{service}\]
+<img src="https://raw.githubusercontent.com/ihsing35/city_co2_prediction/refs/heads/main/img/formula1.png" alt="二氧化碳排放公式" width="70%" height="auto"><br />
 
 ### 5.2 参数更新
 在每个预测年份，参数会根据情景设置进行更新：
-- **人口数量更新**：
-  \[P_{t+1} = P_{t} \times (1 + r_{pop})\]
-  其中，\(P_{t}\) 是第 \(t\) 年的人口数量，\(P_{t+1}\) 是第 \(t + 1\) 年的人口数量，\(r_{pop}\) 是人口增长率。
-- **人均 GDP 更新**：
-  \[GDP_{pc_{t+1}} = GDP_{pc_{t}} \times (1 + r_{gdp})\]
-  其中，\(GDP_{pc_{t}}\) 是第 \(t\) 年的人均 GDP，\(GDP_{pc_{t+1}}\) 是第 \(t + 1\) 年的人均 GDP，\(r_{gdp}\) 是人均 GDP 增长率。
-- **能源强度更新**：
-  \[EI_{t+1} = EI_{t} \times (1 - r_{ei})\]
-  其中，\(EI_{t}\) 是第 \(t\) 年的能源强度，\(EI_{t+1}\) 是第 \(t + 1\) 年的能源强度，\(r_{ei}\) 是能源强度下降率。
-- **化石燃料比例更新**：
-  \[FFR_{t+1} = FFR_{t} \times (1 - r_{ffr})\]
-  其中，\(FFR_{t}\) 是第 \(t\) 年的化石燃料比例，\(FFR_{t+1}\) 是第 \(t + 1\) 年的化石燃料比例，\(r_{ffr}\) 是化石燃料比例下降率。
+<img src="https://raw.githubusercontent.com/ihsing35/city_co2_prediction/refs/heads/main/img/formula2.png" alt="参数更新公式" width="70%" height="auto"><br />
 
 ## 六、输出结果说明
 ### 6.1 CSV 文件
