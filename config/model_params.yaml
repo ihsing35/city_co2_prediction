@@ -1,0 +1,54 @@
+# 系统动力学模型参数，这些参数会影响整个城市二氧化碳排放预测模型的运行和结果
+# 人口增长率，用于每年更新人口数量，数值表示每年人口增长的比例
+population_growth_rate: 0.01
+# 人均 GDP 增长率，用于每年更新人均 GDP 的数值，反映经济发展对排放的潜在影响
+gdp_per_capita_growth_rate: 0.03
+# 能源强度下降率，能源强度指单位 GDP 所消耗的能源量，该参数体现了能源利用效率的提升
+energy_intensity_decrease_rate: 0.02
+# 化石燃料比例下降率，反映了能源结构中化石燃料占比随时间的减少趋势
+fossil_fuel_ratio_decrease_rate: 0.01
+
+# 各领域碳排放系数，用于计算不同领域的二氧化碳排放量
+# 能源领域碳排放系数，乘以能源相关的活动量可得到该领域的二氧化碳排放量
+energy_emission_factor: 0.8
+# 工业领域碳排放系数，衡量工业生产过程中的二氧化碳排放程度
+industry_emission_factor: 0.6
+# 交通领域碳排放系数，用于计算交通活动产生的二氧化碳排放量
+transport_emission_factor: 0.7
+# 建筑领域碳排放系数，与建筑的能源消耗和运营相关的二氧化碳排放
+building_emission_factor: 0.5
+# 农业领域碳排放系数，考虑农业生产活动如施肥、养殖等产生的二氧化碳排放
+agriculture_emission_factor: 0.3
+# 服务领域碳排放系数，涵盖服务业在运营过程中的二氧化碳排放
+service_emission_factor: 0.4
+
+# 初始条件，是模型开始预测时的各项参数的起始值
+# 初始人口数量，作为人口增长计算的起始基数
+initial_population: 1000000
+# 初始人均 GDP，作为人均 GDP 增长计算的起始值
+initial_gdp_per_capita: 50000
+# 初始能源强度，反映模型开始时单位 GDP 的能源消耗情况
+initial_energy_intensity: 0.5
+# 初始化石燃料比例，体现模型开始时能源结构中化石燃料的占比
+initial_fossil_fuel_ratio: 0.8
+
+# 城市名称，用于生成的结果文件和图片的命名标识
+city_name: "示例城市"
+
+# 图片全局文字设置，用于设置生成图片中的文字样式和大小
+font_settings:
+  # 普通文字的字体大小，如坐标轴刻度文字等
+  font_size: 14
+  # 坐标轴标题的字体大小，如 X 轴和 Y 轴的标题
+  axes_titlesize: 18
+  # 坐标轴标签的字体大小，如坐标轴上标注的具体数值
+  axes_labelsize: 16
+  # 图例文字的字体大小，用于区分不同情景或领域的说明文字
+  legend_fontsize: 14
+
+# 预测年份范围，确定模型进行二氧化碳排放预测的时间区间
+years:
+  # 预测开始的年份
+  start: 2025
+  # 预测结束的年份（不包含该年份）
+  end: 2051
