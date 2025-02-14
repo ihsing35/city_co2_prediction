@@ -141,11 +141,11 @@ zero_carbon_scenario:
 
 ### 5.1 二氧化碳排放计算
 在 `src/model.py` 中，每个领域的二氧化碳排放量计算公式如下：
-<img src="https://raw.githubusercontent.com/ihsing35/city_co2_prediction/refs/heads/main/img/formula1.png" alt="二氧化碳排放公式" width="70%" height="auto"><br />
+<img src="https://raw.githubusercontent.com/ihsing35/city_co2_prediction/refs/heads/main/img/formula1.png" alt="二氧化碳排放公式" width="80%" height="auto"><br />
 
 ### 5.2 参数更新
 在每个预测年份，参数会根据情景设置进行更新：
-<img src="https://raw.githubusercontent.com/ihsing35/city_co2_prediction/refs/heads/main/img/formula2.png" alt="参数更新公式" width="70%" height="auto"><br />
+<img src="https://raw.githubusercontent.com/ihsing35/city_co2_prediction/refs/heads/main/img/formula2.png" alt="参数更新公式" width="80%" height="auto"><br />
 
 ## 六、输出结果说明
 ### 6.1 CSV 文件
