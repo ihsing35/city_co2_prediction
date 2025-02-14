@@ -1,0 +1,49 @@
+# 情景设置，定义了不同发展情景下的参数，可用于模拟不同情况下的城市二氧化碳排放
+# 基准情景，代表常规发展路径下的参数设置
+base_scenario:
+  # 默认参数，适用于未特别设置参数的年份
+  default:
+    # 该情景下的人口增长率
+    population_growth_rate: 0.01
+    # 该情景下的人均 GDP 增长率
+    gdp_per_capita_growth_rate: 0.03
+    # 该情景下的能源强度下降率
+    energy_intensity_decrease_rate: 0.02
+    # 该情景下的化石燃料比例下降率
+    fossil_fuel_ratio_decrease_rate: 0.01
+  # 2030 年的特殊参数设置，会覆盖默认参数
+  2030:
+    # 2030 年的人口增长率
+    population_growth_rate: 0.015
+    # 2030 年的人均 GDP 增长率
+    gdp_per_capita_growth_rate: 0.035
+  # 2037 年的特殊参数设置，会覆盖默认参数和之前已设置年份的参数
+  2037:
+    # 2037 年的能源强度下降率
+    energy_intensity_decrease_rate: 0.03
+
+# 低碳情景，代表采取一定低碳措施后的发展情景
+low_carbon_scenario:
+  # 该情景的默认参数
+  default:
+    population_growth_rate: 0.005
+    gdp_per_capita_growth_rate: 0.02
+    energy_intensity_decrease_rate: 0.03
+    fossil_fuel_ratio_decrease_rate: 0.02
+  # 2035 年的特殊参数设置
+  2035:
+    # 2035 年的能源强度下降率
+    energy_intensity_decrease_rate: 0.04
+
+# 零碳情景，代表追求零碳排放目标下的发展情景
+zero_carbon_scenario:
+  # 该情景的默认参数
+  default:
+    population_growth_rate: 0
+    gdp_per_capita_growth_rate: 0.01
+    energy_intensity_decrease_rate: 0.05
+    fossil_fuel_ratio_decrease_rate: 0.05
+  # 2040 年的特殊参数设置
+  2040:
+    # 2040 年的化石燃料比例下降率
+    fossil_fuel_ratio_decrease_rate: 0.06
